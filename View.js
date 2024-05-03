@@ -12,7 +12,7 @@ class View {
               message: 'Выберите категорию',
               choices: [
                 'Кофе',
-                'Вторая'
+                'мороженное'
               ],
             }
           ]);
@@ -26,11 +26,11 @@ class View {
              }
            ]);        
          if (userAnswer.userAnswer.trim().toLowerCase() === answer.toLowerCase()) {
-            console.log(chalk.green('Правильно'));
+            console.log('Правильно');
             counter += 10;
           } else {
-            console.log(chalk.red('Не верно'));
-            console.log(`Правильный ответ: ${chalk.green(answer)}`);
+            console.log(('Не верно'));
+            console.log(`Правильный ответ: ${answer}`);
           }
           return counter;
         }
