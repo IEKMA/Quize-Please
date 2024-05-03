@@ -5,7 +5,6 @@ class Model {
   static async getQuestionsAndAnswers(path) {
     const text = await fs.readFile(`./topics/${path}`, "utf-8");
     const arr = text.split("\n");
-    console.log(arr);
 
     const arrFromTxt = [];
     for (let i = 0; i < arr.length-2; i += 3) {
