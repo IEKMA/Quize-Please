@@ -9,14 +9,14 @@ class Model {
     const arrFromTxt = [];
     for (let i = 0; i < arr.length - 2; i += 3) {
       const objFromTxt = {};
-      const question = arr[i];
-      const correctAnsw = arr[i + 1];
-      const answer = arr[i + 2];
+      const question = arr[i].trim();
+      const value  = arr[i + 1].trim();
+      const choices  = arr[i + 2];
 
-      if (question && correctAnsw) {
+      if (question && value ) {
         objFromTxt.question = question;
-        objFromTxt.correctAnsw = correctAnsw;
-        objFromTxt.answer = answer.split(", ");
+        objFromTxt.answer= value ;
+        objFromTxt.choices = choices.split(", ");
         arrFromTxt.push(objFromTxt);
       }
     }
