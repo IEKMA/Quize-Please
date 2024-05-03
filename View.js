@@ -1,5 +1,4 @@
 const inquirer = require("inquirer");
-
 const fs = require("fs").promises;
 
 class View {
@@ -14,7 +13,7 @@ class View {
               choices: [
                 'Кофе',
 
-                'мороженное'
+                'Мороженое'
 
               ],
             }
