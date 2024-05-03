@@ -20,7 +20,9 @@ class View {
             }
           ]);
       }
+      
       static async pullQuestions({ question, answer, choices }, counter){
+        let sum =  counter
                let userAnswer = await inquirer.prompt([{
                type: 'list',
                name: 'userAnswer',
@@ -31,15 +33,17 @@ class View {
          if (userAnswer.userAnswer.trim().toLowerCase() === answer.toLowerCase()) {
 
             console.log('Правильно');
-            counter += 10;
+            sum += 10;
           } else {
-            console.log(('Не верно'));
+            console.log('Не верно');
             console.log(`Правильный ответ: ${answer}`);
         
   
-          return counter;
+        
         }
+        return sum;
     }
+    
 }
     
 module.exports = View
