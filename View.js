@@ -1,5 +1,7 @@
 const inquirer = require('inquirer')
-const fs = require('fs')
+
+const fs = require ('fs').promises
+
 
 
 class View {
@@ -12,7 +14,11 @@ class View {
               message: 'Выберите категорию',
               choices: [
                 'Кофе',
-                'Вторая'
+
+                
+
+                'мороженное'
+
               ],
             }
           ]);
@@ -26,11 +32,15 @@ class View {
              }
            ]);        
          if (userAnswer.userAnswer.trim().toLowerCase() === answer.toLowerCase()) {
+
             console.log(chalk.green('Правильно'));
             counter += 10;
           } else {
             console.log(chalk.red('Не верно'));
             console.log(`Правильный ответ: ${chalk.green(answer)}`);
+
+
+
           }
           return counter;
         }
