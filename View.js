@@ -1,5 +1,7 @@
 const inquirer = require('inquirer')
-const fs = require('fs')
+
+const fs = require ('fs').promises
+
 
 
 class View {
@@ -12,7 +14,9 @@ class View {
               message: 'Выберите категорию',
               choices: [
                 'Кофе',
+
                 'мороженное'
+
               ],
             }
           ]);
@@ -26,13 +30,17 @@ class View {
              }
            ]);        
          if (userAnswer.userAnswer.trim().toLowerCase() === answer.toLowerCase()) {
+
             console.log('Правильно');
             counter += 10;
           } else {
             console.log(('Не верно'));
             console.log(`Правильный ответ: ${answer}`);
-          }
+        
+  
           return counter;
         }
     }
+}
+    
 module.exports = View
