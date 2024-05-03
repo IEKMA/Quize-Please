@@ -8,7 +8,7 @@ class Model {
     console.log(arr);
 
     const arrFromTxt = [];
-    for (let i = 0; i < arr.length; i++) {
+    for (let i = 0; i < arr.length-2; i += 3) {
       const objFromTxt = {};
       const question = arr[i];
       const correctAnsw = arr[i + 1];
