@@ -7,7 +7,7 @@ class Model {
     const arr = text.split("\n");
 
     const arrFromTxt = [];
-    for (let i = 0; i < arr.length-2; i += 3) {
+    for (let i = 0; i < arr.length - 2; i += 3) {
       const objFromTxt = {};
       const question = arr[i];
       const correctAnsw = arr[i + 1];
@@ -16,14 +16,12 @@ class Model {
       if (question && correctAnsw) {
         objFromTxt.question = question;
         objFromTxt.correctAnsw = correctAnsw;
-        objFromTxt.answer = answer.split(', ');
-        arrFromTxt.push(objFromTxt)
+        objFromTxt.answer = answer.split(", ");
+        arrFromTxt.push(objFromTxt);
       }
-    } 
-    return arrFromTxt
+    }
+    return arrFromTxt;
   }
 }
-
-console.log(Model.getQuestionsAndAnswers("nighthawk_flashcard_data.txt"));
 
 module.exports = Model;
