@@ -1,10 +1,9 @@
-const inquirer = require('inquirer')
+const inquirer = require("inquirer");
 
-const fs = require ('fs').promises
-
-
+const fs = require("fs").promises;
 
 class View {
+
     static async startQuiz() {
         return inquirer
           .prompt([
@@ -44,3 +43,4 @@ class View {
 }
     
 module.exports = View
+
